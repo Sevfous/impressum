@@ -458,7 +458,42 @@ legend {
 }
 
 ol,
-ul,
+
+/* ===================================
+   List Styling
+   =================================== */
+
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 1.5rem;
+}
+
+ul ul ul {
+    list-style-type: square;
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+ul.custom-bullets {
+    list-style-type: none;
+}
+
+ul.custom-bullets li::before {
+    content: '✔';
+    color: #4f46e5;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
 menu {
   list-style: none;
   margin: 0;
@@ -875,10 +910,6 @@ video {
   height: full;
 }
 
-.h-\[\] {
-  height: ;
-}
-
 .h-\[300\] {
   height: 300;
 }
@@ -949,10 +980,6 @@ video {
 
 .min-h-96 {
   min-height: 24rem;
-}
-
-.min-h-\[\] {
-  min-height: ;
 }
 
 .min-h-\[500px\] {
@@ -1068,6 +1095,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .items-end {
